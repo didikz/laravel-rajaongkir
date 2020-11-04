@@ -10,7 +10,7 @@ class LaravelRajaongkir
     protected $apiKey;
     protected $plan;
     protected $baseUrls = [
-        'starter' => 'https://api.rajaongkir.com/starter'
+        'starter' => 'https://api.rajaongkir.com/starter',
     ];
     protected $responseData;
 
@@ -32,12 +32,11 @@ class LaravelRajaongkir
             $client = new Client();
             $response = $client->request('GET', $this->baseUrls[$this->plan] . $uri, [
                 'headers' => array_merge([
-                    'key' => $this->apiKey
+                    'key' => $this->apiKey,
                 ], $headers),
-                'query' => $query
+                'query' => $query,
             ]);
             $this->responseData = json_decode($response->getBody(), true)['rajaongkir']['results'];
-
         } catch (ClientException $clientException) {
             throw new \Exception('Client Error');
         }
@@ -56,9 +55,9 @@ class LaravelRajaongkir
             $response = $client->request('POST', $this->baseUrls[$this->plan] . $uri, [
                 'headers' => array_merge([
                     'content-type' => 'application/x-www-form-urlencoded',
-                    'key' => $this->apiKey
+                    'key' => $this->apiKey,
                 ], $headers),
-                'form_params' => $params
+                'form_params' => $params,
             ]);
             $this->responseData = json_decode($response->getBody(), true)['rajaongkir']['results'];
         } catch (ClientException $clientException) {

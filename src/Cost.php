@@ -12,8 +12,8 @@ class Cost extends LaravelRajaongkir
         'starter' => [
             'jne',
             'pos',
-            'tiki'
-        ]
+            'tiki',
+        ],
     ];
 
     /**
@@ -23,6 +23,7 @@ class Cost extends LaravelRajaongkir
     public function origin(int $originCityId): self
     {
         $this->originCityId = $originCityId;
+
         return $this;
     }
 
@@ -33,6 +34,7 @@ class Cost extends LaravelRajaongkir
     public function destination(int $destinationCityId): self
     {
         $this->destinationCityId = $destinationCityId;
+
         return $this;
     }
 
@@ -43,6 +45,7 @@ class Cost extends LaravelRajaongkir
     public function weight($weight): self
     {
         $this->weight = $weight;
+
         return $this;
     }
 
@@ -58,6 +61,7 @@ class Cost extends LaravelRajaongkir
         }
 
         $this->courier = $courierCode;
+
         return $this;
     }
 
@@ -71,9 +75,10 @@ class Cost extends LaravelRajaongkir
             'origin' => $this->originCityId,
             'destination' => $this->destinationCityId,
             'weight' => $this->weight,
-            'courier' => $this->courier
+            'courier' => $this->courier,
         ];
         $this->postRequest('/cost', $params);
+
         return $this->responseData;
     }
 }

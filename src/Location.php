@@ -13,6 +13,7 @@ class Location extends LaravelRajaongkir
     {
         $query = ($provinceId) ? ['id' => $provinceId] : [];
         $this->getRequest('/province', $query);
+
         return $this->responseData;
     }
 
@@ -26,9 +27,10 @@ class Location extends LaravelRajaongkir
     {
         $query = [
             'province' => $provinceId,
-            'id' => $cityId
+            'id' => $cityId,
         ];
         $this->getRequest('/city', $query);
+
         return $this->responseData;
     }
 }
