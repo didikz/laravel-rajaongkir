@@ -1,0 +1,57 @@
+{
+    "name": "didikz/laravel-rajaongkir",
+    "description": "Rajaongkir API Wrapper for Laravel Framework",
+    "type": "library",
+    "keywords": [
+        "Laravel",
+        "Rajaongkir",
+        "API Wrapper"
+    ],
+    "require": {
+        "php": "^7.3",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.4",
+        "vimeo/psalm": "^3.11"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "didikz",
+            "email": "rezd14@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Didikz\\LaravelRajaongkir\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Didikz\\LaravelRajaongkir\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Didikz\\LaravelRajaongkir\\LaravelRajaongkirServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
