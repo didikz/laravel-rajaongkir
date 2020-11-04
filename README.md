@@ -1,8 +1,7 @@
 # Laravel Rajaongkir
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_name/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor_name/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_name/:package_name/run-tests?label=tests)](https://github.com/:vendor_name/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_name/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor_name/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/didikz/laravel-rajaongkir.svg?style=flat-square)](https://packagist.org/packages/didikz/laravel-rajaongkir)
+[![Total Downloads](https://img.shields.io/packagist/dt/didikz/laravel-rajaongkir.svg?style=flat-square)](https://packagist.org/packages/didikz/laravel-rajaongkir)
 
 ![alt text](https://banners.beyondco.de/Laravel%20Rajaongkir.png?theme=light&packageName=didikz%2Flaravel-rajaongkir&pattern=ticTacToe&style=style_1&description=Rajaongkir+API+simple+wrapper+for+Laravel&md=1&fontSize=100px&images=truck "Laravel RajaOngkir Logo")
 
