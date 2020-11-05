@@ -32,6 +32,11 @@ use Didikz\LaravelRajaOngkir\Location;
 
 $location = new Location(config('laravel-rajaongkir.api_key');
 $location->province();
+
+// or using facade
+use Didikz\LaravelRajaongkir\Facade\Location;
+
+$provinces = Location::province();
 ```
 
 ### Get Province by Id
@@ -39,7 +44,12 @@ $location->province();
 use Didikz\LaravelRajaOngkir\Location;
 
 $location = new Location(config('laravel-rajaongkir.api_key');
-$location->province(1);
+$province = $location->province(1);
+
+// or using facade
+use Didikz\LaravelRajaongkir\Facade\Location;
+
+$province = Location::province(1);
 ```
 
 ### Get All Cities by Province Id
@@ -48,7 +58,13 @@ use Didikz\LaravelRajaOngkir\Location;
 
 $provinceId = 1;
 $location = new Location(config('laravel-rajaongkir.api_key');
-$location->city($provinceId);
+$cities = $location->city($provinceId);
+
+// or using facade
+use Didikz\LaravelRajaongkir\Facade\Location;
+
+$provinceId = 1;
+$cities = Location::city($provinceId);
 ```
 
 ### Get city 
@@ -58,7 +74,14 @@ use Didikz\LaravelRajaOngkir\Location;
 $provinceId = 6;
 $cityId = 152;
 $location = new Location(config('laravel-rajaongkir.api_key');
-$location->city($provinceId, $cityId);
+$city = $location->city($provinceId, $cityId);
+
+// or using facade
+use Didikz\LaravelRajaongkir\Facade\Location;
+
+$provinceId = 6;
+$cityId = 152;
+$city = Location::city($provinceId, $cityId);
 ```
 
 ### Calculate Cost
@@ -70,6 +93,11 @@ use Didikz\LaravelRajaOngkir\Cost;
 
 $cost = new Cost(config('laravel-rajaongkir.api_key');
 $cost->destination(152)->origin(155)->weight(2000)->courier('jne')->calculate();
+
+// or using facade
+use Didikz\LaravelRajaOngkir\Facade\Cost;
+
+$cost = Cost::destination(152)->origin(155)->weight(2000)->courier('jne')->calculate();
 ```
 
 ## Testing
